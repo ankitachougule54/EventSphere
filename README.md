@@ -1,455 +1,450 @@
-Browser
-   │
-   ▼
-public/index.html
-   │
-   │  <div id="root"></div>
-   ▼
-src/index.js
-   │
-   │  ReactDOM.createRoot()
-   │
-   ▼
-<BrowserRouter>
-   │
-   ▼
-<App />
-   │
-   ▼
-<Routes>
-   │
-   ▼
-<Route path="/" element={<GuestLayout />}>
-   │
-   ▼
-GuestLayout.jsx
-   │
-   ├── GuestHeader
-   │
-   ├── GuestNavbar
-   │
-   ├── <Outlet />
-   │
-   └── GuestFooter
-   │
-   ▼
-Matched Page
+# 🎉 Event Management System
 
-<Routes>
+A full-stack **Event Management System** developed using the **MERN Stack** to simplify the process of creating, managing, organizing, and monitoring events through a centralized web application.
 
-    <Route path="/" element={<GuestLayout />}>
+The system provides an administrator-focused dashboard where **events, employees, required items, and technologies** can be managed efficiently.
 
-        <Route index element={<Home />} />
+---
 
-        <Route path="home" element={<Home />} />
+## 📌 About the Project
 
-        <Route path="about" element={<About />} />
+Managing events manually involves multiple activities such as maintaining event details, assigning employees, tracking required resources, and monitoring event status.
 
-        <Route path="services" element={<Services />} />
+The **Event Management System** provides a centralized digital platform to organize these activities and maintain event-related information in a structured and efficient manner.
 
-        <Route path="contact" element={<Contact />} />
+The application is developed using the **MERN Stack** and follows a **client-server architecture**.
 
-        <Route path="login" element={<Login />} />
+---
 
-        <Route path="register" element={<Register />} />
+## 🎯 Objectives
 
-    </Route>
+* Provide a centralized platform for event management.
+* Allow administrators to create and manage events.
+* Maintain event details in an organized manner.
+* Assign employees to specific events.
+* Manage required items for events.
+* Manage technologies associated with events.
+* Track the current status of events.
+* Provide an easy-to-use administrative dashboard.
+* Reduce manual effort involved in event organization.
+* Maintain event-related resources in a structured manner.
 
-</Routes>
+---
 
-Route Mapping
-URL	            Component	            Purpose
-/	             Home.jsx	            Home page
-/home	         Home.jsx	            Home page
-/about	         About.jsx	            About page
-/services	     Services.jsx       	Services page
-/contact	     Contact.jsx	        Contact page
-/login	         Login.jsx	            Login page
-/register	     Register.jsx	        Registration page
+## ✨ Key Features
 
+### 📊 Admin Dashboard
 
-# MERN Routing Flow
-## 1. Complete Frontend Routing Flow
+The admin dashboard provides an overview of the system and displays important information such as:
+
+* Total Events
+* Event Status
+* Employees
+* Required Items
+* Technologies
+
+---
+
+### 📅 Event Management
+
+Administrators can create and manage event information including:
+
+* Event Title
+* Date & Time
+* Venue
+* Capacity
+* Description
+* Event Status
+* Assigned Employees
+* Required Items
+* Technologies
+
+### Event Status
+
+Events can have one of the following statuses:
 
 ```text
-                         USER
-                           |
-                           v
-                       BROWSER
-                           |
-                           v
-                  public/index.html
-                           |
-                           |
-                    <div id="root">
-                           |
-                           v
-                     src/index.js
-                           |
-                           v
-                    ReactDOM.createRoot()
-                           |
-                           v
-                     <BrowserRouter>
-                           |
-                           v
-                         <App />
-                           |
-                           v
-                     src/App.js
-                           |
-                           v
-                       <Routes>
-                           |
-                           v
-                  Route path="/" 
-                  element={<GuestLayout />}
-                           |
-                           v
-                    GuestLayout.jsx
-                           |
-             +-------------+-------------+
-             |             |             |
-             v             v             v
-       GuestHeader    GuestNavbar    GuestFooter
-                           |
-                           v
-                       <Outlet />
-                           |
-                           v
-                 React Router checks URL
-                           |
-            +--------------+--------------+
-            |              |              |
-            v              v              v
-         /about         /login        /register
-            |              |              |
-            v              v              v
-        About.jsx       Login.jsx     Register.jsx
+Upcoming
+Completed
+Cancelled
+```
 
-        
-        
-        <Route path="/" element={<GuestLayout />}>
-                    |
-                    +---- index route
-                    |        |
-                    |        v
-                    |     Home.jsx
-                    |
-                    +---- /home
-                    |        |
-                    |        v
-                    |     Home.jsx
-                    |
-                    +---- /about
-                    |        |
-                    |        v
-                    |     About.jsx
-                    |
-                    +---- /services
-                    |        |
-                    |        v
-                    |     Services.jsx
-                    |
-                    +---- /contact
-                    |        |
-                    |        v
-                    |     Contact.jsx
-                    |
-                    +---- /login
-                    |        |
-                    |        v
-                    |     Login.jsx
-                    |
-                    +---- /register
-                             |
-                             v
-                          Register.jsx
+---
 
-How <Outlet /> Works
-GuestLayout.jsx:
-<GuestNavbar />
-<Outlet />
-<GuestFooter />
+### 👨‍💼 Employee Management
 
-URL: /about
+The system allows administrators to maintain employee information and assign employees to events according to event requirements.
 
-        GuestLayout
-             │
-     ┌───────┴────────┐
-     ▼                ▼
- GuestNavbar       GuestFooter
-             │
-             ▼
-          <Outlet />
-             │
-             ▼
-         About.jsx
+---
 
---------------------------------
-        Guest Navbar
---------------------------------
+### 🧰 Required Items Management
 
-          About Page
+Event-related items can be maintained and associated with events to help organize the resources required for an event.
 
---------------------------------
-        Guest Footer
---------------------------------
+---
 
-http://localhost:3000/login
-Browser
-   │
-   ▼
-/login
-   │
-   ▼
-BrowserRouter
-   │
-   ▼
-App.js
-   │
-   ▼
-Route path="login"
-   │
-   ▼
-<Login />
-   │
-   ▼
-Login.jsx
+### 💻 Technology Management
 
+Technologies required for an event can be maintained and associated with the corresponding event.
 
+---
 
+### 🔐 Admin Management
 
-----------------------------BACKEND FOLDER STRUCTURE----------------------
+The admin section provides a centralized interface for managing event-related data.
 
-server2/
+The system includes dedicated admin components such as:
+
+* Admin Header
+* Admin Navbar
+* Admin Sidebar
+* Admin Footer
+* Dashboard
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Axios
+* React Router
+* React-Bootstrap
+
+### Backend
+
+* Node.js
+* Express.js
+* REST API
+
+### Database
+
+* MongoDB
+* Mongoose
+
+### Development Tools
+
+* Visual Studio Code
+* Git
+* GitHub
+* Postman / Thunder Client
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                         ┌──────────────────────┐
+                         │        Admin         │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   React Frontend     │
+                         │   Admin Dashboard    │
+                         └──────────┬───────────┘
+                                    │
+                              HTTP / REST API
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   Express.js Server  │
+                         │       Backend        │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │       MongoDB        │
+                         │       Database       │
+                         └──────────────────────┘
+```
+
+---
+
+## 🔄 Event Management Flow
+
+```text
+Admin Login
+     ↓
+Admin Dashboard
+     ↓
+Create / Manage Event
+     ↓
+Add Event Details
+     ↓
+Assign Employees
+     ↓
+Add Required Items
+     ↓
+Add Technologies
+     ↓
+Set Event Status
+     ↓
+Monitor Events
+```
+
+---
+
+## 📋 Event Data
+
+Each event can contain information such as:
+
+| Field              | Description                         |
+| ------------------ | ----------------------------------- |
+| Event Title        | Name of the event                   |
+| Date & Time        | Scheduled event date and time       |
+| Venue              | Event location                      |
+| Capacity           | Maximum number of participants      |
+| Description        | Information about the event         |
+| Status             | Upcoming, Completed, or Cancelled   |
+| Assigned Employees | Employees responsible for the event |
+| Required Items     | Items/resources required            |
+| Technologies       | Technologies required for the event |
+
+---
+
+## 📁 Project Structure
+
+The project follows a frontend-backend structure.
+
+```text
+Event-Management/
 │
-├── controllers/
-│   ├── EmployeeController.js
-│   ├── ItemController.js
-│   └── UserController.js
+├── frontend/
+│   │
+│   ├── public/
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── admin/
+│   │   └── ...
+│   │
+│   ├── package.json
+│   └── ...
 │
-├── middlewares/
-│   └── upload.js
+├── backend/
+│   │
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Routes/
+│   ├── Middlewares/
+│   ├── index.js
+│   ├── package.json
+│   └── ...
 │
-├── models/
-│   ├── Employee.js
-│   ├── Item.js
-│   └── User.js
-│
-├── routes/
-│   ├── EmployeeRouter.js
-│   ├── ItemRouter.js
-│   └── UserRouter.js
-│
-├── uploads/
-│   └── uploaded images...
-│
-├── .env
-├── index.js
-├── package.json
-└── package-lock.json                                         
+└── README.md
+```
 
+> **Note:** Update the folder names above if your actual repository uses different names.
 
+---
 
+## ⚙️ Installation & Setup
 
+### 1. Clone the Repository
 
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
+### 2. Navigate to the Project
 
+```bash
+cd Event-Management
+```
 
+---
 
+### 3. Install Backend Dependencies
 
+```bash
+cd backend
+npm install
+```
 
+---
 
+### 4. Configure Environment Variables
 
+Create a `.env` file inside the backend folder.
 
+Example:
 
+```env
+PORT=9000
+MONGODB_URI=your_mongodb_connection_string
+```
 
+> ⚠️ **Important:** Keep your `.env` file private. Never upload database credentials, passwords, API keys, or other sensitive information to GitHub.
 
+---
 
+### 5. Start the Backend
 
+```bash
+npm start
+```
 
+If your project uses Nodemon:
 
+```bash
+npm run dev
+```
 
+The backend server runs on:
 
+```text
+http://localhost:9000
+```
 
+---
 
+### 6. Install Frontend Dependencies
 
+Open another terminal:
 
+```bash
+cd frontend
+npm install
+```
 
+---
 
+### 7. Start the Frontend
 
+```bash
+npm start
+```
 
+The frontend will run on the local development URL provided by the React development server.
 
+---
 
+## 🔗 Backend API
 
+The backend provides RESTful APIs for managing different parts of the application.
 
+### Event API
 
+Example event endpoints:
 
+```text
+GET     /events
+POST    /events
+PUT     /events/:id
+DELETE  /events/:id
+```
 
+> The exact available endpoints may vary according to the implementation.
 
+### Backend Server
 
+```text
+http://localhost:9000
+```
 
+---
 
+## 🔄 Backend Architecture
 
+The backend follows a structured architecture:
 
+```text
+Client Request
+      ↓
+    Routes
+      ↓
+  Controllers
+      ↓
+    Models
+      ↓
+   MongoDB
+```
 
+This separation helps keep the backend organized, maintainable, and easier to extend.
 
+---
 
+## 🎨 User Interface
 
+The admin interface is designed with a structured dashboard layout containing:
 
+* Navigation Bar
+* Sidebar
+* Dashboard
+* Event Management Pages
+* Employee Management
+* Required Items Management
+* Technology Management
+* Footer
 
+The application uses a **dark-themed interface** with a consistent visual design across the admin section.
 
+---
 
-                    USER
-                     │
-                     ▼
-                 Browser
-                     │
-                     ▼
-              index.html
-                     │
-                     ▼
-                 index.js
-                     │
-                     ▼
-              BrowserRouter
-                     │
-                     ▼
-                  App.js
-                     │
-                     ▼
-              React Routes
-                     │
-                     ▼
-              GuestLayout
-                     │
-          ┌──────────┴──────────┐
-          │                     │
-          ▼                     ▼
-       Navbar                <Outlet />
-                                │
-                                ▼
-                     ┌──────────┼──────────┐
-                     │          │          │
-                     ▼          ▼          ▼
-                   Home       Login      Register
-                                │          │
-                                │          │
-                                └────┬─────┘
-                                     │
-                                API Request
-                                     │
-                                     ▼
-                              Express Server
-                                     │
-                                     ▼
-                                   Routes
-                                     │
-                                     ▼
-                                Controller
-                                     │
-                                     ▼
-                                   Model
-                                     │
-                                     ▼
-                                  MongoDB
-                                     │
-                                     ▼
-                                  Response
-                                     │
-                                     ▼
-                                React Page
-                                     │
-                                     ▼
-                               UI Updated
-# Getting Started with Create React App
+## 📊 Project Benefits
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Centralized event information
+* Reduced manual work
+* Easy event tracking
+* Organized resource management
+* Simplified employee assignment
+* Easy access to event information
+* Structured data management
+* Scalable application architecture
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Future Scope
 
-### `npm start`
+The system can be further enhanced with:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* 📧 Email Notifications
+* 🔔 Event Reminders
+* 📱 Improved Mobile Responsiveness
+* 📊 Advanced Event Analytics
+* 📅 Calendar Integration
+* 👥 Participant Management
+* 🎟️ Online Event Registration
+* 📈 Event Reports
+* 🔐 Advanced Role-Based Access Control
+* ☁️ Cloud Deployment
+* 📷 Event Image and Media Management
+* 📩 Automated Event Notifications
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 💡 Project Vision
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The goal of this project is to provide a structured and centralized solution for managing events and their associated resources.
 
-### `npm run build`
+The system can be further expanded into a complete event management platform supporting **event planning, employee coordination, resource management, participant registration, notifications, analytics, and reporting**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📌 Project Information
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Project Name:** Event Management System
 
-### `npm run eject`
+**Project Type:** Full-Stack Web Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Technology:** MERN Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Purpose:** Educational / Academic Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 👩‍💻 Development
 
-## Learn More
+The **Event Management System** is a full-stack web application developed using the **MERN Stack** for centralized event organization and management.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📄 License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This project was developed for **educational and academic purposes**.

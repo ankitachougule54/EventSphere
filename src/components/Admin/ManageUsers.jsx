@@ -13,7 +13,7 @@ import {
   Badge,
 } from "react-bootstrap";
 
-const API_BASE = "http://localhost:9000/users";
+const API_BASE = "https://eventsphere-5fey.onrender.com/users";
 
 const ManageUsers = () => {
   // =========================
@@ -58,7 +58,7 @@ const ManageUsers = () => {
       const token = localStorage.getItem("token");
 
 const response = await axios.get(
-  "http://localhost:9000/users",
+  "https://eventsphere-5fey.onrender.com/users",
   {
     headers: {
       Authorization: `Bearer ${token}`,

@@ -13,7 +13,7 @@ import {
 
 
 const REGISTRATION_API =
-  "http://localhost:9000/event-registration";
+  "https://eventsphere-5fey.onrender.com/event-registration";
 
 
 export default function MyEvents() {
@@ -555,7 +555,7 @@ export default function MyEvents() {
         position: "absolute",
         inset: 0,
 
-        backgroundImage: `url(http://localhost:9000/uploads/${event.eventImage})`,
+        backgroundImage: `url(https://eventsphere-5fey.onrender.com/uploads/${event.eventImage})`,
 
         backgroundSize: "cover",
 

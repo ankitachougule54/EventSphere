@@ -15,7 +15,7 @@ import {
 
 
 const CONTACT_API =
-  "http://localhost:9000/contact";
+  "https://eventsphere-5fey.onrender.com/contact";
 
 
 const ManageContactMessages = () => {

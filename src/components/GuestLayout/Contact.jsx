@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CONTACT_API = "http://localhost:9000/contact";
+const CONTACT_API = "https://eventsphere-5fey.onrender.com/contact";
 
 function Contact() {
   const [formData, setFormData] = useState({

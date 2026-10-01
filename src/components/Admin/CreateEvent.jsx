@@ -16,10 +16,10 @@ import {
 // API URLS
 // ==========================================
 
-const EVENT_API = "http://localhost:9000/events";
-const EMPLOYEE_API = "http://localhost:9000/employee";
-const ITEM_API = "http://localhost:9000/item";
-const TECH_API = "http://localhost:9000/tech";
+const EVENT_API = "https://eventsphere-5fey.onrender.com/events";
+const EMPLOYEE_API = "https://eventsphere-5fey.onrender.com/employee";
+const ITEM_API = "https://eventsphere-5fey.onrender.com/item";
+const TECH_API = "https://eventsphere-5fey.onrender.com/tech";
 
 // ==========================================
 // CREATE EVENT COMPONENT

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Container, Row, Col, Form, Button, Alert, Spinner, Card } from "react-bootstrap";
 
 
-const API_BASE = "http://localhost:9000/users"; 
+const API_BASE = "https://eventsphere-5fey.onrender.com/users"; 
  
 export default class ChangePassword extends React.Component { 
   state = { 

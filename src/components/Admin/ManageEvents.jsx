@@ -13,7 +13,7 @@ import {
   Badge,
 } from "react-bootstrap";
 
-const API_BASE = "http://localhost:9000/events";
+const API_BASE = "https://eventsphere-5fey.onrender.com/events";
 
 const ManageEvents = () => {
   const [events, setEvents] = useState([]);
@@ -1174,7 +1174,7 @@ const ManageEvents = () => {
                     <img
 
                       src={
-                        `http://localhost:9000/uploads/${event.eventImage}`
+                        `https://eventsphere-5fey.onrender.com/uploads/${event.eventImage}`
                       }
 
                       alt={

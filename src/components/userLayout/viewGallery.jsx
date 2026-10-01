@@ -25,7 +25,7 @@ const ViewGallery = () => {
   const fetchGalleries = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9000/gallery"
+        "https://eventsphere-5fey.onrender.com/gallery"
       );
 
       setGalleries(response.data.galleries);
@@ -109,13 +109,13 @@ const ViewGallery = () => {
                   className="gallery-image-container"
                   onClick={() =>
                     handleImageClick(
-                      `http://localhost:9000/uploads/${gallery.galleryImage}`
+                      `https://eventsphere-5fey.onrender.com/uploads/${gallery.galleryImage}`
                     )
                   }
                 >
 
                   <img
-                    src={`http://localhost:9000/uploads/${gallery.galleryImage}`}
+                    src={`https://eventsphere-5fey.onrender.com/uploads/${gallery.galleryImage}`}
                     alt={gallery.title}
                     className="gallery-image"
                   />

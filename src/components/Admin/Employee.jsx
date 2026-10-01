@@ -24,8 +24,8 @@ import {
   MdImage,
 } from "react-icons/md";
 
-const API_URL = "http://localhost:9000/employee";
-const IMAGE_URL = "http://localhost:9000/uploads/";
+const API_URL = "https://eventsphere-5fey.onrender.com/employee";
+const IMAGE_URL = "https://eventsphere-5fey.onrender.com/uploads/";
 
 const Employee = () => {
   const [employees, setEmployees] = useState([]);

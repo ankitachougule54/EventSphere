@@ -57,7 +57,7 @@ const Register = () => {
       }
 
       const res = await axios.post(
-        "http://localhost:9000/users/register",
+        "https://eventsphere-5fey.onrender.com/users/register",
         data
       );
 

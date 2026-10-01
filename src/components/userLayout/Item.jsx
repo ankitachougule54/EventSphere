@@ -21,7 +21,7 @@ const Item = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get("http://localhost:9000/item");
+      const response = await axios.get("https://eventsphere-5fey.onrender.com/item");
       setItems(response.data.items);
     } catch (error) {
       console.error("Error fetching items:", error);
@@ -66,12 +66,12 @@ const Item = () => {
                 className="item-image-container"
                 onClick={() =>
                   handleImageClick(
-                    `http://localhost:9000/uploads/${item.itemImage}`
+                    `https://eventsphere-5fey.onrender.com/uploads/${item.itemImage}`
                   )
                 }
               >
                 <img
-                  src={`http://localhost:9000/uploads/${item.itemImage}`}
+                  src={`https://eventsphere-5fey.onrender.com/uploads/${item.itemImage}`}
                   alt={item.itemName}
                   className="item-image"
                 />

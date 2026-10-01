@@ -12,9 +12,9 @@ import {
 } from "react-bootstrap";
 
 
-const EVENT_API = "http://localhost:9000/events";
+const EVENT_API = "https://eventsphere-5fey.onrender.com/events";
 const REGISTRATION_API =
-  "http://localhost:9000/event-registration";
+  "https://eventsphere-5fey.onrender.com/event-registration";
 
 
 export default function Events() {
@@ -399,7 +399,7 @@ export default function Events() {
         position: "absolute",
         inset: 0,
 
-        backgroundImage: `url(http://localhost:9000/uploads/${event.eventImage})`,
+        backgroundImage: `url(https://eventsphere-5fey.onrender.com/uploads/${event.eventImage})`,
 
         backgroundSize: "cover",
         backgroundPosition: "center",

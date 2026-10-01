@@ -56,7 +56,7 @@ const Dashboard = () => {
 
       // Send token with API request
       const response = await axios.get(
-        "http://localhost:9000/admin/dashboard",
+        "https://eventsphere-5fey.onrender.com/admin/dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`,

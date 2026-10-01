@@ -12,7 +12,7 @@ import {
   Spinner,
 } from "react-bootstrap";
 
-const API_BASE = "http://localhost:9000/users";
+const API_BASE = "https://eventsphere-5fey.onrender.com/users";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -275,7 +275,7 @@ const Profile = () => {
 >
   {profile?.profileImage ? (
     <img
-      src={`http://localhost:9000${profile.profileImage}`}
+      src={`https://eventsphere-5fey.onrender.com${profile.profileImage}`}
       alt="Profile"
       style={{
         width: "100%",

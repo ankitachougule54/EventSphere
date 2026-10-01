@@ -19,7 +19,7 @@ import {
   MdRefresh,
 } from "react-icons/md";
 
-const API_URL = "http://localhost:9000/tech";
+const API_URL = "https://eventsphere-5fey.onrender.com/tech";
 
 const Tech = () => {
   // ============================

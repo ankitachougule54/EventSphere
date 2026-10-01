@@ -318,7 +318,7 @@ npm run dev
 
 The backend server runs locally on:
 
-http://localhost:9000
+https://eventsphere-5fey.onrender.com
 🔗 Backend API
 
 The backend provides RESTful APIs for different modules of the EventSphere application.

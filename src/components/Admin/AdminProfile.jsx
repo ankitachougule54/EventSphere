@@ -13,8 +13,8 @@ import {
 } from "react-bootstrap";
 
 
-const API_BASE = "http://localhost:9000/admin";
-const SERVER_URL = "http://localhost:9000";
+const API_BASE = "https://eventsphere-5fey.onrender.com/admin";
+const SERVER_URL = "https://eventsphere-5fey.onrender.com";
 
 
 export default function AdminProfile() {

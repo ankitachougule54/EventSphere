@@ -28,8 +28,8 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const API_URL = "http://localhost:9000/item";
-const IMAGE_URL = "http://localhost:9000/uploads";
+const API_URL = "https://eventsphere-5fey.onrender.com/item";
+const IMAGE_URL = "https://eventsphere-5fey.onrender.com/uploads";
 
 const Items = () => {
   // =========================

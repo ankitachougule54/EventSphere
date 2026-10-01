@@ -38,7 +38,7 @@ const Gallery = () => {
   const fetchGalleries = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9000/gallery"
+        "https://eventsphere-5fey.onrender.com/gallery"
       );
 
       setGalleries(response.data.galleries || []);
@@ -77,7 +77,7 @@ const Gallery = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:9000/gallery",
+        "https://eventsphere-5fey.onrender.com/gallery",
         formData
       );
 
@@ -121,7 +121,7 @@ const Gallery = () => {
 
     try {
       await axios.delete(
-        `http://localhost:9000/gallery/${id}`
+        `https://eventsphere-5fey.onrender.com/gallery/${id}`
       );
 
       alert("Gallery image deleted successfully!");
@@ -186,7 +186,7 @@ const Gallery = () => {
 
     try {
       await axios.put(
-        `http://localhost:9000/gallery/${editingGallery._id}`,
+        `https://eventsphere-5fey.onrender.com/gallery/${editingGallery._id}`,
         formData
       );
 
@@ -211,7 +211,7 @@ const Gallery = () => {
   // =====================================================
 
   const getImageUrl = (image) => {
-    return `http://localhost:9000/uploads/${image}`;
+    return `https://eventsphere-5fey.onrender.com/uploads/${image}`;
   };
 
   return (
